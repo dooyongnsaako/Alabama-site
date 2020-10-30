@@ -110,12 +110,10 @@ header .login-section a {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
 }
 
 .showcase-products .product {
-  width: 300px;
+  width: 30%;
   height: 250px;
   background-color: #b18c30;
 }

@@ -91,9 +91,10 @@ header {
   .flexes {
     @include flex;
     justify-content: space-around;
+    flex-wrap: wrap;
   }
   .product {
-    width: 30%;
+    width: 300px;
     height: 250px;
     background-color: #b18c30;
     &:nth-child(2) {

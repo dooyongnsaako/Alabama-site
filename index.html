@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Leisure site</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/bootstrap-grid.min.css">
 </head>
 <body>
-    <header>
+    <header class="container">
         <div class="menuBar">
                 <div class="flex">
                     <div class="bars">
@@ -29,13 +30,112 @@
         </div>
     </header>
 
-    <section class="showcase-products">
-        <div class="flexes">
-            <div class="product"></div>
-            <div class="product" ></div>
-            <div class="product"></div>
+    <div class="container filter-container">
+        <div class="row justify-content-center">
+            <div class="col-6 col-md-4 col-sm-4">
+                <div class="filter-btn">
+                    <p>Filter</p>
+                    <span><i class="fas fa-plus"></i></span>
+                </div>
+                <div class="filter-result">
+                    <ul>
+                        <li><a href="#">$500.00 - $600.00</a></li>
+                        <li><a href="#">$500.00 - $600.00</a></li>
+                        <li><a href="#">$500.00 - $600.00</a></li>
+                        <li><a href="#">$500.00 - $600.00</a></li>
+                        <li><a href="#">$500.00 - $600.00</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    
+
+    <section class="container showcase-products">
+        <div class="row justify-content-between">
+            <div class="product">
+                <div class="product-details">
+                    <p>The Caftan Tunic</p>
+                    <span class="price">$200.00 - $400.00</span>
+                    <div class="colors-container">
+                        <ul>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                        <span>More Colors</span>
+                    </div>
+                </div>
+            </div>
+            <div class="product" >
+                <div class="product-details">
+                    <p>The Caftan Tunic</p>
+                    <span class="price">$200.00 - $400.00</span>
+                    <div class="colors-container">
+                        <ul>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                        <span>More Colors</span>
+                    </div>
+                </div>
+            </div>
+            <div class="product rellax" data-rellax-speed="1">
+                <div class="product-details">
+                    <p>The Caftan Tunic</p>
+                    <span class="price">$200.00 - $400.00</span>
+                    <div class="colors-container">
+                        <ul>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                        <span>More Colors</span>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
+
+    <nav class="container-fluid">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Coats & Jackets</a></li>
+            <li><a href="#">Core</a></li>
+            <li><a href="#">Tops</a></li>
+            <li><a href="#">Accessories</a></li>
+            <li><a href="#">Skirts & Pants</a></li>
+        </ul>
+    </nav>
+
+    <div class="container-fluid sliders">
+        <div class="row">
+            <div class="col-12">
+                <div class="slider-container">
+                    <div class="slider">
+                        <div class="slider-item"></div>
+                        <div class="slider-item"></div>
+                        <div class="slider-item"></div>
+                        <div class="slider-item"></div>
+                        <div class="slider-item"></div>
+                        <div class="slider-item"></div>
+                        <div class="slider-item"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+<script src="js/fontawesome.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/rellax.min.js"></script>
+<script src="js/slick.min.js"></script>
 <script src="js/script.js"></script>
+<script>
+let rellax = new Rellax(".rellax");
+</script>
 </body>
 </html>

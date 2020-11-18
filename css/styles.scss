@@ -1,4 +1,6 @@
 @import "reset.scss";
+@import "slick.scss";
+@import "slick-theme.scss";
 
 @font-face {
   src: url(OpenSans-Regular.ttf);
@@ -20,10 +22,9 @@ body {
 }
 
 header {
-  width: 100%;
-  padding: 20px;
+  padding: 20px 0;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   .menuBar .flex {
     @include flex;
@@ -85,22 +86,174 @@ header {
   }
 }
 
+.filter-container {
+  .filter-btn {
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    align-items: center;
+    cursor: pointer;
+    p {
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-size: 1.1rem;
+      font-weight: bold;
+    }
+  }
+  .filter-result {
+    background-color: #444;
+    max-height: 0;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+  }
+  .show-filter-result {
+    max-height: 400px;
+    opacity: 1;
+  }
+  .filter-result ul li {
+    list-style-type: none;
+    width: 100%;
+    padding: 15px;
+
+    a {
+      text-decoration: none;
+      color: #fff;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+        Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    }
+  }
+}
+
 .showcase-products {
-  width: 80%;
-  margin: 50px auto;
+  padding-bottom: 100px;
   .flexes {
-    @include flex;
     justify-content: space-around;
   }
   .product {
     width: 30%;
     height: 250px;
     background-color: #b18c30;
+    position: relative;
+    cursor: pointer;
     &:nth-child(2) {
       height: 300px;
     }
     &:nth-child(3) {
       height: 270px;
     }
+    &:hover .product-details {
+      display: block;
+    }
+    .product-details {
+      width: 100%;
+      position: absolute;
+      left: 0;
+      bottom: -80px;
+      display: none;
+      p {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+        font-size: 1rem;
+        font-weight: bold;
+      }
+      span.price {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+        font-size: 0.8rem;
+        font-weight: bold;
+      }
+      .colors-container {
+        display: flex;
+        align-items: center;
+
+        ul li {
+          list-style-type: none;
+          width: 25px;
+          height: 25px;
+          border-radius: 50%;
+          display: inline-block;
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+          &:nth-child(1) {
+            background-color: dodgerblue;
+          }
+          &:nth-child(2) {
+            background-color: #f39555;
+          }
+          &:nth-child(3) {
+            background-color: rgb(74, 192, 80);
+          }
+        }
+        span {
+          display: inline-block;
+          color: #6d6d6d;
+          font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+          font-weight: bold;
+          margin-left: 15px;
+        }
+      }
+    }
+  }
+}
+
+nav {
+  padding: 20px 0;
+  background-color: #fff;
+  border-top: 1px solid #333;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  z-index: 5;
+  ul {
+    list-style-type: none;
+    &:after {
+      @include clearfix;
+    }
+  }
+  li {
+    float: left;
+    margin-left: 25px;
+  }
+  li a {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    text-decoration: none;
+    color: #333333;
+    display: block;
+    font-weight: bold;
+  }
+}
+.sliders {
+  padding-bottom: 200px;
+}
+
+.slider-item {
+  width: 300px;
+  height: 480px;
+  border: 1px solid #111;
+
+  &:nth-child(1) {
+    background-color: darkgreen;
+  }
+  &:nth-child(2) {
+    background-color: rgb(236, 131, 45);
+  }
+  &:nth-child(3) {
+    background-color: rgb(43, 17, 158);
+  }
+  &:nth-child(4) {
+    background-color: rgb(240, 21, 130);
+  }
+  &:nth-child(5) {
+    background-color: rgb(73, 3, 100);
+  }
+  &:nth-child(6) {
+    background-color: rgb(119, 109, 115);
+  }
+  &:nth-child(7) {
+    background-color: rgb(253, 230, 180);
   }
 }
